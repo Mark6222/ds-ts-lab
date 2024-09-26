@@ -78,12 +78,11 @@ function findBuddyContact(list: BuddyList, name: string): string | undefined {
 // Test for findBuddyContact.
 console.log("Contact buddy at: ", findBuddyContact(myFootballBuddies, "Ralph Graham"));
 
-function findFriendsBuddyList(list: BuddyList): string | undefined {
+function findFriendsBuddyList(list: BuddyList) {
     for (const buddy of list.members) {
         if ("age" in buddy) {
             return buddy.name;
         }
-        return undefined;
     }
 }
 console.log("Freinds in buddy list1: ", findFriendsBuddyList(myFootballBuddies));
